@@ -6,12 +6,9 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-entity
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          preset="written1.jpg"
-        >
-	</a-entity>
+      <a-assets>
+        <img id="transpImage" src="https://fourpirsquare.github.io/pattern-ARONEIMG.png">
+     </a-assets>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
