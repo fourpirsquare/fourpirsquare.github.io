@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene ar>
+	  <a-assets>
+		<img id="transpImage" src="image.jpg">
+		<img id="newimage" src="Logo.PNG">
+		</a-assets>	
+    <a-box width="0.25" height="0.25" depth="0.25" position="-0.25 0.125 -0.9" rotation="0 45 0" color="#4CC3D9"></a-box>
+    <a-sphere position="0 0.3125 -1.0" radius="0.125" color="#EF2D5E"></a-sphere>
+    <a-cylinder position="0.25 0.1875 -0.9" radius="0.125" height="0.375" color="#FFC65D"></a-cylinder>
+    <a-plane position="0 0 -1" rotation="-90 0 0" width="1" height="1" color="#7BC8A4" shadow></a-plane>
+		<a-image position="0 0.6 -1.25" src="#transpImage"> </a-image>
+		<a-image position="0.1 0.3 -0.5" src="#newimage" rotation="0 10 0"> </a-image>
+     </a-scene>
+  </body>
+</html>
