@@ -23,6 +23,7 @@
 					const virtual = document.querySelector('#virtual');
 					raycaster.addEventListener('click', () => {
 					virtual.setAttribute('position', raycaster.components.cursor.intersection.point);
+					virtual.setAttribute('visible',true);
 					});
 				}
 				const scene = document.querySelector('a-scene');
