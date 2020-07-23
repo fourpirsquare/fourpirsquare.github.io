@@ -17,10 +17,10 @@
 				function onSceneLoaded() {
 					const raycaster = document.querySelector('[ar-raycaster]');
 					const cursor = document.querySelector('#cursor');
-					const virtual = document.querySelector('#virtual');
 					raycaster.addEventListener('raycaster-intersection', (event) => {
 					cursor.setAttribute('position', event.detail.intersections[0].point);
 					});
+					const virtual = document.querySelector('#virtual');
 					raycaster.addEventListener('click', () => {
 					virtual.setAttribute('position', raycaster.components.cursor.intersection.point);
 					});
