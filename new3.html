@@ -20,9 +20,10 @@
 					raycaster.addEventListener('raycaster-intersection', (event) => {
 					cursor.setAttribute('position', event.detail.intersections[0].point);
 					});
-					const virtual = document.querySelector('#virtual');
-					raycaster.addEventListener('click', () => {
-					virtual.setAttribute('position', raycaster.components.cursor.intersection.point);
+					window.addEventListener('click', function() {
+					let virtual = document.querySelector('#virtual');
+					let position = cursor.getAttribute('position');
+					virtual.setAttribute('position', position);
 					virtual.setAttribute('visible',true);
 					});
 				}
