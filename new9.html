@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body>
+		<a-scene ar>
+			<a-assets>
+				<img id="srcimage001" src="image001.png">
+				<img id="srcimage002" src="image002.png">
+				<img id="srcimage003" src="image003.png">
+				<img id="srcimage004" src="image004.png">
+				<img id="srcimage005" src="image005.png">
+				<img id="srcimage006" src="image006.png">				
+			</a-assets>	
+			<a-camera>
+			<a-image id="idimage001" position="-0.25 -0.125 -0.9" src="#srcimage001" scale="0.3 0.3 0.3" visible="true"> </a-image>
+			<a-image id="idimage002" position="-0.25 -0.12 -0.9" src="#srcimage002" scale="0.4 0.4 0.4" visible="false"> </a-image>
+			<a-image id="idimage003" position="-0.25 -0.12 -0.9" src="#srcimage003" scale="0.5 0.7 0.5" rotate="0 0 90" visible="false"> </a-image>
+			<a-image id="idimage004" position="-0.25 -0.125 -0.9" src="#srcimage004" scale="0.5 0.7 0.5" rotate="0 180 90" visible="false"> </a-image>
+			<a-image id="idimage005" position="-0.25 -0.125 -0.9" src="#srcimage005" scale="0.5 0.7 0.5" rotate="0 90 90" visible="false"> </a-image>
+			<a-image id="idimage006" position="-0.25 -0.125 -0.9" src="#srcimage006" scale="0.3 0.3 0.3" visible="false"> </a-image>			
+			<script type="text/javascript">
+				var i = 1;
+				let image001 = document.querySelector('#idimage001');
+				let image002 = document.querySelector('#idimage002');
+				let image003 = document.querySelector('#idimage003');
+				let image004 = document.querySelector('#idimage004');
+				let image005 = document.querySelector('#idimage005');
+				let image006 = document.querySelector('#idimage006');				
+				for (i=1; i<=5; i++){
+					delay(i);
+				};
+				function delay(i) {
+					setTimeout(function() {
+					switch (i) {
+						case 1:
+							image001.setAttribute('visible', false);
+							image002.setAttribute('visible', true);
+							break;
+						case 2:
+							image002.setAttribute('visible', false);
+							image003.setAttribute('visible', true);
+							break;
+						case 3:
+							image003.setAttribute('visible', false);
+							image004.setAttribute('visible', true);
+							break;
+						case 4:
+							image004.setAttribute('visible', false);
+							image005.setAttribute('visible', true);
+							break;
+						case 5:
+							image005.setAttribute('visible', false);
+							image006.setAttribute('visible', true);
+							break;						
+					};
+				}, 5000 * i);
+				};
+			</script>
+			</a-camera>
+		</a-scene>
+	</body>
+</html>
