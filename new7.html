@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body>
+		<a-scene ar>
+			<a-assets>
+				<img id="newimage" src="logo.png">
+			</a-assets>	
+			<a-sphere id="cursor" radius="0.04" visible="true"  
+				color="teal">
+			</a-sphere>
+			<a-image id="virtual" src="#newimage" position visible="false" rotation="0 10 0"> </a-image>
+			<a-camera>
+			<a-entity ar-raycaster raycaster cursor="fuse:false"> </a-entity>
+			<a-entity position="0 0 -0.1" scale="0.001 0.001 0.001"
+				geometry="primitive: ring; radiusInner: 0.8; radiusOuter: 1.0" 
+				material="color: teal; shader: flat; transparent: true">
+			</a-entity>			
+			<script type="text/javascript">	
+				let scene = document.querySelector('a-scene');
+				let raycaster = document.querySelector('[ar-raycaster]');
+				let cursor = document.querySelector('#cursor');
+				const position = cursor.getAttribute('position');	
+				console.log('I am set');
+				console.log(position);
+				raycaster.addEventListener('raycaster-intersection', function(e){
+					cursor.setAttribute('position', e.detail.intersections[0].point);
+					let position = e.detail.intersections[0].point;
+					console.log('I am changed');
+					console.log(position);
+					cursor.setAttribute('visible', true);
+				});
+				raycaster.addEventListener('raycaster-intersection-cleared', function(e){
+					cursor.setAttribute('visible', false);
+				});
+				window.addEventListener('click', function() {
+					let virtual = document.querySelector('#virtual');
+					console.log('I am clicked');
+					console.log(virtual);
+					//let position = cursor.getAttribute('position');
+					console.log(cursor.getAttribute('position').y);
+					console.log(position)
+					console.log(virtual.getAttribute('visible'));
+					console.log(virtual.getAttribute('position').y);
+					virtual.setAttribute('position', position);
+					console.log('changed');
+					console.log(virtual.getAttribute('position').y);
+					virtual.setAttribute('visible',true);
+					console.log(virtual.getAttribute('visible'));
+					console.log('bye');
+				});
+			</script>
+			</a-camera>
+		</a-scene>
+	</body>
+</html>
