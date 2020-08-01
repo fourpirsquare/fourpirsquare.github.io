@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> My page </title>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+		<script>
+			AFRAME.registerComponent("collider-check", {
+				dependencies: ['raycaster'],
+				init: function () {
+					this.el.addEventListener("click", function (evt) {
+					let image001 = document.querySelector('#idimage001');
+					let image002 = document.querySelector('#idimage002');
+					let image003 = document.querySelector('#idimage003');
+					let image004 = document.querySelector('#idimage004');
+					let image005 = document.querySelector('#idimage005');
+					let image006 = document.querySelector('#idimage006');						
+					image001.setAttribute('visible', false);
+					image002.setAttribute('visible', true);					
+					console.log('Player hit something!');
+					});
+				}
+			});		
+		</script>
+		<script>
+			AFRAME.registerComponent("collider-check1", {
+				dependencies: ['raycaster'],
+				init: function () {
+					this.el.addEventListener("click", function (evt) {
+					let image001 = document.querySelector('#idimage001');
+					let image002 = document.querySelector('#idimage002');
+					let image003 = document.querySelector('#idimage003');
+					let image004 = document.querySelector('#idimage004');
+					let image005 = document.querySelector('#idimage005');
+					let image006 = document.querySelector('#idimage006');								
+					image001.setAttribute('visible', true);
+					image002.setAttribute('visible', false);							
+					console.log('Player hit something again!');
+					});
+				}
+			});		
+		</script>		
+	</head>
+	<body>
+		<a-scene ar>
+			<a-assets>
+				<img id="srcimage001" src="image001.png">
+				<img id="srcimage002" src="image002.png">
+				<img id="srcimage003" src="image003.png">
+				<img id="srcimage004" src="image004.png">
+				<img id="srcimage005" src="image005.png">
+				<img id="srcimage006" src="image006.png">
+				<img id="srcimage007" src="leftarrow.png">				
+				<img id="srcimage008" src="leftarrow.png">								
+				<img id="srcimage009" src="rightarrow.png">				
+				<img id="srcimage010" src="rightarrow.png">				
+			</a-assets>	
+			<a-camera>
+				<a-image id="idimage007" position="0 0 -3" src="#srcimage007" cursor="rayOrigin: mouse; mouseCursorStylesEnabled: true" scale="0.2 0.25 0.45" visible="true"> </a-image>
+				<a-image collider-check id="idimage008" position="0 0 -3" src="#srcimage008" scale="0.2 0.25 0.45" visible="true"> </a-image>
+				<a-image id="idimage009" position="0.1 0 -3" src="#srcimage009" cursor="rayOrigin: mouse; mouseCursorStylesEnabled: true" scale="0.2 0.25 0.45" visible="true"> </a-image>				
+				<a-image collider-check1 id="idimage010" position="0.1 0 -3" src="#srcimage010" scale="0.2 0.25 0.45" visible="true"> </a-image>
+				<a-image id="idimage001" position="0.0 -0.3 -0.9" src="#srcimage001" scale="0.8 0.3 0.3" visible="true"> </a-image>
+				<a-image id="idimage002" position="0.0 -0.3 -0.9" src="#srcimage002" scale="0.4 0.2 0.4" visible="false"> </a-image>				
+			</a-camera>
+		<a-scene>
+	</body>
+</html>
