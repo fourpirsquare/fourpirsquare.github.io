@@ -146,7 +146,7 @@ blockquote > cite {font-weight: 400;font-size: 14px;display: block;}
     /*background: -webkit-linear-gradient(left, #3264f5 2%,#7004bc 82%);*/
     background: -webkit-linear-gradient(left, #3264f5 2%,#20c997 82%);
 	/*background: linear-gradient(to right, #3264f5 2%,#7004bc 82%);*/
-	background: linear-gradient(to right, #c1d0fc 2%,#62d9b6 82%);
+	background: linear-gradient(to right, #80CBC4 2%,#80DEEA 82%);
 }
 
 /*.gradient-bg2{
@@ -2858,7 +2858,7 @@ input.inputerror, textarea.inputerror, select.inputerror {
     position: fixed;
     top: 0;
     bottom: 0;
-    background: #84a2f9;
+    background: #80CBC4;
     z-index: 800;
     text-align: center;
     overflow: hidden;
