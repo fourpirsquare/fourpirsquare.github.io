@@ -147,7 +147,7 @@ blockquote > cite {font-weight: 400;font-size: 14px;display: block;}
     background: -webkit-linear-gradient(left, #3264f5 2%,#20c997 82%);
 	/*background: linear-gradient(to right, #3264f5 2%,#7004bc 82%);*/
 	/*background: linear-gradient(to right, #80CBC4 2%,#80DEEA 82%);*/
-	background: linear-gradient(to right, #99E6E6 2%,#509BF5 82%);
+	background: linear-gradient(to right, #99E6E6 15%,#509BF5 80%);
 }
 
 /*.gradient-bg2{
@@ -358,9 +358,9 @@ header a.logo img {max-width: 150px;}
     background: -moz-linear-gradient(left, #7004bc 2%, #3264f5 82%);
     background: -webkit-linear-gradient(left, #7004bc 2%, #3264f5 82%);
    /* background: linear-gradient(to right, #7004bc 2%, #3264f5 82%);*/
-    background: linear-gradient(to right, #95E0C7 2%, #509BF5  82%);
+    background: linear-gradient(to right, #99E6E6 15%, #509BF5  80%);
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3264f5', endColorstr='#7004bc',GradientType=1 );*/
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95E0C7', endColorstr='#509BF5',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99E6E6', endColorstr='#509BF5',GradientType=1 );
 }
 
 .navbar-top-default #agency{
@@ -2882,7 +2882,7 @@ input.inputerror, textarea.inputerror, select.inputerror {
     background: #fff;*/
     -moz-animation: preloader 500ms linear infinite;
     -webkit-animation: preloader 500ms linear infinite;
-    animation: preloader 500ms linear infinite;
+    animation: preloader 1000ms linear 3 alternate;
     position: absolute;
     top: 0;0
     left: 0;
@@ -2895,7 +2895,7 @@ input.inputerror, textarea.inputerror, select.inputerror {
     background: #000;
     -moz-animation: preloader-shadow 500ms linear infinite;
     -webkit-animation: preloader-shadow 500ms linear infinite;
-    animation: preloader-shadow 500ms linear infinite;
+    animation: preloader-shadow 1000ms linear 3 alternate;
     opacity: 0.1;
     position: absolute;
     top: 59px;
@@ -2978,53 +2978,83 @@ input.inputerror, textarea.inputerror, select.inputerror {
     }
 }*/
 @keyframes preloader {
-    17% {
-        border-bottom-right-radius: 3px;
+    10% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);        
+		border-bottom-right-radius: 3px;
     }
-    25% {
-        -moz-transform: scale(1.5, 0.8);
-        -ms-transform: scale(1.5, 0.8);
-        -webkit-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
+    20% {
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
     }
-    50% {
-        -moz-transform: scale(1.5, 0.8);
-        -ms-transform: scale(1.5, 0.8);
-        -webkit-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
+    40% {
+        -moz-transform: scale(1.75);
+        -ms-transform: scale(1.75);
+        -webkit-transform: scale(1.75);
+        transform: scale(1.75);
         border-bottom-right-radius: 40px;
     }
-    75% {
-        -moz-transform: scale(1.5, 0.8);
-        -ms-transform: scale(1.5, 0.8);
-        -webkit-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
+    60% {
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    80% {
+        -moz-transform: scale(2.4);
+        -ms-transform: scale(2.4);
+        -webkit-transform: scale(2.4);
+        transform: scale(2.4);
     }
     100% {
-        -moz-transform: scale(1.5, 0.8);
-        -ms-transform: scale(1.5, 0.8);
-        -webkit-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
-    }
-}
-@-moz-keyframes preloader-shadow {
-    50% {
-        -moz-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
-    }
-}
-@-webkit-keyframes preloader-shadow {
-    50% {
-        -moz-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
+        -moz-transform: scale(3);
+        -ms-transform: scale(3);
+        -webkit-transform: scale(3);
+        transform: scale(3);
     }
 }
 @keyframes preloader-shadow {
-    50% {
-        -moz-transform: scale(1.5, 0.8);
-        -ms-transform: scale(1.5, 0.8);
-        -webkit-transform: scale(1.5, 0.8);
-        transform: scale(1.5, 0.8);
+ 10% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);        
+		border-bottom-right-radius: 3px;
+    }
+    20% {
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    40% {
+        -moz-transform: scale(1.75);
+        -ms-transform: scale(1.75);
+        -webkit-transform: scale(1.75);
+        transform: scale(1.75);
+        border-bottom-right-radius: 40px;
+    }
+    60% {
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    80% {
+        -moz-transform: scale(2.4);
+        -ms-transform: scale(2.4);
+        -webkit-transform: scale(2.4);
+        transform: scale(2.4);
+    }
+    100% {
+        -moz-transform: scale(3);
+        -ms-transform: scale(3);
+        -webkit-transform: scale(3);
+        transform: scale(3);
     }
 }
 
