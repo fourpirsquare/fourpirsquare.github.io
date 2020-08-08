@@ -168,8 +168,10 @@ blockquote > cite {font-weight: 400;font-size: 14px;display: block;}
     background: #f033b5;
     background: -moz-linear-gradient(left, #f033b5 2%, #f2a2af 82%);
     background: -webkit-linear-gradient(left, #f033b5 2%,#f2a2af 82%);
-    background: linear-gradient(to right, #f033b5 2%,#f2a2af 82%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f033b5', endColorstr='#f2a2af',GradientType=1 );
+    /*background: linear-gradient(to right, #f033b5 2%,#f2a2af 82%);*/
+    background: linear-gradient(to right, #800080 2%,#b266b2 82%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f033b5', endColorstr='#f2a2af',GradientType=1 );*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#800080', endColorstr='#993299',GradientType=1 );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -305,7 +307,7 @@ header.header-appear nav .logo .logo-dark, header.header-appear nav.header-dark 
 header.header-appear nav .logo .logo-dark, header.header-appear nav.header-light .logo .logo-dark {visibility: visible;  opacity: 1; width: auto; transition-duration:0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
 header.header-appear nav .logo .logo-light, header.header-appear nav.header-light .logo .logo-light {visibility: hidden; opacity: 0; width: 0; transition-duration:0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
 header a.logo {display: inline-block; vertical-align: middle;line-height: 1}
-header a.logo img {max-width: 150px;}
+header a.logo img {max-width: 300px;}
 
 /* nav top default */
 
@@ -2887,7 +2889,7 @@ input.inputerror, textarea.inputerror, select.inputerror {
 }
 
 .box:after {
-    content: url("https://fourpirsquare.github.io/Picture5.png");
+   content: url("https://fourpirsquare.github.io/Picture6.png");
    /* width: 50px;
     height: 50px;
     background: #fff;*/
@@ -2896,9 +2898,9 @@ input.inputerror, textarea.inputerror, select.inputerror {
     animation: preloader 1000ms linear 3 alternate;
     position: absolute;
     top: 0;0
-    left: 30px;
-    border-radius: 3px;
-}
+    left: -50px;
+    border-radius: 50%;
+}	
 .box:before {
     content: '';
     /*width: 50px;
